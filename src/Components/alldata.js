@@ -1,12 +1,20 @@
 import React from 'react';
-import { UserContext } from '.';
+import { Card } from './context';
+
 
 
 export function AllData(){
-    const ctx = React.useContext(UserContext);
+    const action = localStorage.getItem("action");
+    const amount = localStorage.getItem("amount");
+    const page = [`User ${action}: $${amount}`]
+
+
     return (
-        <h1>All Data<br/>
-            {JSON.stringify(ctx)}
-        </h1>
+        <Card
+        bgcolor="primary"
+        header= "All Data"
+        body={page}
+            
+    />
     )
 }

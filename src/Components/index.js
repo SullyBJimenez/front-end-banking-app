@@ -17,8 +17,8 @@ export function Spa(){
         <BrowserRouter>
             <NavBar/>
                 <Routes>
-                    <Route path="/home" exact           Component={Home}/>
-                    <Route path="#/createaccount/" exact   component={CreateAccount}/>
+                    <Route path="/home/" exact           element={<Home/>}/>
+                    <Route path="/createaccount/" exact   element={<CreateAccount/>}/>
                     <Route path="/login/"        exact    element={<Login />}/>
                     <Route path="/deposit/"     exact    element={<Deposit/>}/>
                     <Route path="/withdraw/"    exact    element={<Withdraw/>}/>
